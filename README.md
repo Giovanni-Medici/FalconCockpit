@@ -8,15 +8,15 @@ This repository contains a bunch of scripts in various scripting languages, that
 
 Most of the projects are related to the development of an home cockpit for an F-16, the only exception is an arduino project I did for an autopilot of a CRJ-200.
 
-### [Vibration Motors](https://github.com/Giovanni-Medici/FalconCockpit)
+### [Vibration Motors](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/VibrationMotors)
 
 This project relies on an Arduino Leonardo and Arduino Motor Shield and the great [lighting viper libs](https://github.com/lightningviper/lightningstools), to interface, through a C# windows application, Falcon 4 BMS, and a seat with 6 vibration motors. [More info here](giovannimedici.wordpress.com/2020/11/21/vibration-motors-seat/)
 
-### [Standalone USB adapter for TM Cougar Throttle](giovannimedici.wordpress.com/2020/08/28/standalone-usb-adapter-for-tm-cougar-throttle/)
+### [Standalone USB adapter for TM Cougar Throttle](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/USBstandaloneCougar)
 
 In this project taking as reference [Uriba's post](https://pit.uriba.org/uriba/standalone-cougar-tqs-part-i/), I created a standalone adapter for the Thrustmaster Hotas Cougar Throttle, taking advantage of a Teensy 4.1. [More info here](giovannimedici.wordpress.com/2020/08/28/standalone-usb-adapter-for-tm-cougar-throttle/)
 
-### [CRJ-200 Panel](giovannimedici.wordpress.com/2013/01/07/crj-200-panel/)
+### [CRJ-200 Panel](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/CRJ200autopilot)
 
 This arduino project controls a Teensy 2.1++ Board which is interfaced with the buttons, Leds and encoders of the autopilot panel of a CRJ-200 (for x-plane flight simulator). [More info here](giovannimedici.wordpress.com/2013/01/07/crj-200-panel/)
 
