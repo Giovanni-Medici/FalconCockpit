@@ -212,43 +212,6 @@ byte parseCommand(byte rc)
 
   }
 
-  /*
-    if (rc == 'a')
-    {
-    // Motor 1 on
-    motor1.run(FORWARD);
-
-    }
-    if (rc == 'b')
-    {
-    motor2.run(FORWARD);
-    }
-    if (rc == 'c')
-    {
-    // Motor 4 on
-    motor3.run(FORWARD);
-
-    }
-    if (rc == 'd')
-    {
-     motor4.run(FORWARD);
-    }
-    if (rc == 'g')
-    {
-       motor1.run(FORWARD);
-       motor2.run(FORWARD);
-    }
-
-    if (rc == '`')
-    {
-    // Releases all the motors
-    motor1.run(RELEASE);
-    motor2.run(RELEASE);
-    motor3.run(RELEASE);
-    motor4.run(RELEASE);
-
-    }
-  */
 }
 
 

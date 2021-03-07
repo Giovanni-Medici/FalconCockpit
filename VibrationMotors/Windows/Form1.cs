@@ -139,16 +139,14 @@ namespace VibrationMotors
             }
             else
             {
-                MessageBox.Show("The user has not selected a valid COM port. Please select a COM port among the available ones.", "User did not selected a valid COM port", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You did not select a valid COM port. Please select a COM port among the available ones.", "valid COM port selection not available", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //ArduinoPort = new System.IO.Ports.SerialPort();
             }
 
             // Create Serial Port 
-            
 
-            
-            
-            
+
+
             _stopWatch.Start();
             Uold = 0;   // initialize old values of body axis frame velocities
             Vold = 0;
@@ -222,7 +220,7 @@ namespace VibrationMotors
                 if (!isShowedMsg)                              
                 {                                           
                     isShowedMsg = true;
-                    MessageBox.Show("Falcon 4 BMS shared memory is active, but the user has not selected a valid COM port. Please select a COM port among the available ones.", "User did not selected a valid COM port", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Falcon 4 BMS shared memory is active, but you did not select a valid COM port. Please select a COM port among the available ones.", "Valid COM port selection not available", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }                                           
             }
         }
@@ -779,7 +777,7 @@ namespace VibrationMotors
                 
                 if (listBoxCOM.FindString(Properties.Settings.Default.comport)<0)
                 {
-                    MessageBox.Show("The saved port: " + Properties.Settings.Default.comport + "could not be found. Please revise the connection or the port selected.", "User selected COM port not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The saved port: " + Properties.Settings.Default.comport + "could not be found. Please revise the connection or the port selected.", "Selected COM port not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 if (isFound)
                 {
