@@ -390,14 +390,14 @@ namespace VibrationMotors
                 MotPow = Math.Max(MotPow, Linear(vdot, 0.005, 0.05, 0, 100));
                 MotOn |= 0b_00101010;
                 //textBoxEvent.Text = Convert.ToString(MotOn, 2);
-                textBoxEvent.AppendText("v lat" + Environment.NewLine);
+                textBoxEvent.AppendText("Lateral Velocity" + Environment.NewLine);
             }
             if (vdot < -0.005)
             {
                 MotPow = Math.Max(MotPow, Linear(vdot, -0.05, -0.005, 100, 0));
                 MotOn |= 0b_00010101;
                 //textBoxEvent.Text = Convert.ToString(MotOn, 2);
-                textBoxEvent.AppendText("v lat" + Environment.NewLine);
+                textBoxEvent.AppendText("Lateral Velocity" + Environment.NewLine);
             }
 
             Uold = u;
@@ -424,6 +424,7 @@ namespace VibrationMotors
                 // Linear interp motor and keep max vib value
                 MotPow = Math.Max( MotPow, Linear(Vinf, 30, 100, 0, 100) );
                 MotOn |= 0b_00111100;
+                textBoxEvent.AppendText("RUNWAY RUN" + Environment.NewLine);
             }
         }
 
@@ -435,7 +436,7 @@ namespace VibrationMotors
                 MotPow = Math.Max(MotPow, 80 );
                 MotOn |= 0b_00000011;
                 //textBoxEvent.Text = Convert.ToString(MotOn, 2);
-                textBoxEvent.AppendText("GUN" + Environment.NewLine);
+                textBoxEvent.AppendText("FIRING GUN" + Environment.NewLine);
             }
         }
 
@@ -491,7 +492,7 @@ namespace VibrationMotors
                 MotPow = Math.Max(MotPow, Linear(vinf, 0, 1, 30, 40));
                 MotOn |= 0b_0011_1100;
 
-                textBoxEvent.AppendText("LANDING GEAR" + Environment.NewLine);
+                textBoxEvent.AppendText("LANDING GEAR Extens./Retract." + Environment.NewLine);
             }
         }
         private void SpeedBrake()
@@ -502,7 +503,7 @@ namespace VibrationMotors
                 MotPow = Math.Max( MotPow, Linear(vinf* _lastFlightData.speedBrake , 0, 1, 25, 35) );
                 MotOn |= 0b_0000_0011;
 
-                textBoxEvent.AppendText("BRAKES" + Environment.NewLine);
+                textBoxEvent.AppendText("AIRBRAKES" + Environment.NewLine);
             }
         }
 
@@ -514,7 +515,7 @@ namespace VibrationMotors
                 MotPow = Math.Max(MotPow, Linear(_lastFlightData.alpha , 12, 16, 0, 50));
                 MotOn |= 0b_00111111;
 
-                textBoxEvent.AppendText("AoA" + Environment.NewLine);
+                textBoxEvent.AppendText("High AoA" + Environment.NewLine);
             }
         }
 
