@@ -16,6 +16,10 @@ This project relies on an Arduino Leonardo and Arduino Motor Shield and the grea
 
 In this project taking as reference [Uriba's post](https://pit.uriba.org/uriba/standalone-cougar-tqs-part-i/), I created a standalone adapter for the Thrustmaster Hotas Cougar Throttle, taking advantage of a Teensy 4.1. [More info here](giovannimedici.wordpress.com/2020/08/28/standalone-usb-adapter-for-tm-cougar-throttle/)
 
+### [Ch Pro Pedals Gameport to USB adapter](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/CHProPedalsGameport2USB)
+
+In this project I created an arduino interface and board to convert to USB Gameport CH Pro Pedals. [More info here](giovannimedici.wordpress.com/2020/10/11/ch-pro-pedals-gameport-to-usb-adapter/)
+
 ### [CRJ-200 Panel](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/CRJ200autopilot)
 
 This arduino project controls a Teensy 2.1++ Board which is interfaced with the buttons, Leds and encoders of the autopilot panel of a CRJ-200 (for x-plane flight simulator). [More info here](giovannimedici.wordpress.com/2013/01/07/crj-200-panel/)
