@@ -26,7 +26,10 @@
    7  = 4
 
 Change log:
-20210228 : Added axis shaping for antenna 
+20210310 : Added a byte check whether the user has calibrated the device at
+           least once. Added comments. Removed warnings during compilation.
+20210228 : Added axis shaping for Antenna 
+
 
 © 2021. This work is licensed under a CC BY 4.0 license. 
 You are free to:
@@ -40,8 +43,7 @@ NoDerivatives — If you remix, transform, or build upon the material, you may
 not distribute the modified material.
 No additional restrictions — You may not apply legal terms or technological 
 measures that legally restrict others from doing anything the license permits.
-
-*/
+.*/
 
 #include <EEPROM.h>
 #include "Smoothed.h"
@@ -51,28 +53,28 @@ const int numButtons = 32;  // 32 for Cougar Throttle 16 for Teensy, 32 for Teen
 unsigned long loopCount;
 unsigned long startTime, holdStart;
 String msg;
-bool flagStart = 0;
-// Activates Serial.prints
-bool printSerial = 0;
 
-uint16_t btns = 0;
+bool flagStart = 0;         // True when both T1 and T6 are pressed
+bool printSerial = 0;       // When true, prints verbose text in the Serial Monitor
+
+uint16_t btns = 0;          // Array of the buttons
 
 char lo ;
 char hi ;
 
 // arrays that store min max 0/idle
-unsigned int Tscale[3];
-unsigned int Xscale[3], Yscale[3], Ascale[3], Rscale[3];
+unsigned short Tscale[3];
+unsigned short Xscale[3], Yscale[3], Ascale[3], Rscale[3];
 
 // Handle the toggle switches
 byte T7prev, T7now, T8prev, T8now, T12prev, T12now, T12now2, T8now2, T7now2 = 0;
 uint32_t T7time, T8time, T10time, T12time = 0;
 
-Smoothed <uint32_t> TSens;
-Smoothed <uint32_t> XSens;
-Smoothed <uint32_t> YSens;
-Smoothed <uint32_t> ASens;
-Smoothed <uint32_t> RSens;
+Smoothed <unsigned short> TSens;
+Smoothed <unsigned short> XSens;
+Smoothed <unsigned short> YSens;
+Smoothed <unsigned short> ASens;
+Smoothed <unsigned short> RSens;
 
 
 int ledPin  = 13;
@@ -122,7 +124,7 @@ void setup() {
 
 
 void loop() {
-  uint32_t TNow, XNow, YNow, ANow, RNow;
+  unsigned short TNow, XNow, YNow, ANow, RNow;
 
   loopCount++;
   if ( (millis() - startTime) > 5000 ) {
@@ -262,7 +264,7 @@ void loop() {
   // Starts counting
   if (bitRead(btns, 0) && bitRead(btns, 5))
   {
-    if (flagStart == 0)
+    if (flagStart == 0) // flags 
     {
       holdStart = millis();
       flagStart = 1;
@@ -272,7 +274,10 @@ void loop() {
       if (( millis() - holdStart) > 2000)
       {
         // Enters configuration mode
-        if (printSerial)  Serial.println("CONFIG");
+        if (printSerial)  {
+          Serial.println("");
+          Serial.println("Entering Calibration mode");
+        }
         flagStart = 0;
         enterConfig();
         loadCalibration();
@@ -302,7 +307,7 @@ void loop() {
 
 
 
-int checkInt(uint32_t x) {
+int checkInt(unsigned short x) {
   // Clamps to max min values 10 bit
   if (x > 1023) x = 1023;
   if (x < 0) x = 0;
@@ -310,14 +315,14 @@ int checkInt(uint32_t x) {
 }
 
 
-int checkInt12(uint32_t x) {
+int checkInt12(unsigned short x) {
   // Clamps to max min values 12 bit
   if (x > 4095) x = 4095;
   if (x < 0) x = 0;
   return x;
 }
 
-int checkInt13(uint32_t x) {
+int checkInt13(unsigned short x) {
   // Clamps to max min values 13 bit
   if (x > 8191) x = 8191;
   if (x < 0) x = 0;
@@ -347,8 +352,8 @@ void enterConfig() {
   unsigned int Y_max, Y_min, Y_0 ;
 
   //uint32_t T_now;
-  unsigned int T_now;
-  unsigned int X_now, Y_now, A_now, R_now ;
+  unsigned int T_now = 0;
+  unsigned int X_now = 0, Y_now = 0, A_now = 0, R_now = 0;
 
   T_min = A_min = R_min = X_min = Y_min = 4095;
   T_max = T_idle = 0;
@@ -356,7 +361,8 @@ void enterConfig() {
   R_max = R_0 = 0;
   X_max = X_0 = 0;
   Y_max = Y_0 = 0;
-  //Serial.println("Calibrating for 20 seconds");
+
+  
   // Turns on the led
   digitalWrite(ledPin, HIGH);
   while ((now - startCali) < 20000L)
@@ -402,7 +408,10 @@ void enterConfig() {
     
     now = millis();
   }
-  if (printSerial) Serial.println("Calibration Finished");
+  if (printSerial) {
+    Serial.println("");
+    Serial.println("Calibration Finished");
+  }
   X_0 = X_now;
   Y_0 = Y_now;
   A_0 = A_now;
@@ -433,6 +442,8 @@ void enterConfig() {
   shiftSave(24, T_min);
   shiftSave(26, T_max);
   shiftSave(28, T_idle);
+  
+  EEPROM.update(30,1); // Update checks if the value need to be changed (preserve EEPROM)
   blinkLED(4);
 
 }
@@ -477,6 +488,10 @@ int shiftLoad(int addr )
 
 void loadCalibration()
 {
+  byte isConfig = EEPROM.read( 30 );
+  
+  if (isConfig!=255)
+  {
   // Reads from EEPROM and fills the calibration values
   Xscale[0] = shiftLoad(  0 );
   Xscale[1] = shiftLoad(  2 );
@@ -498,7 +513,42 @@ void loadCalibration()
   Tscale[0] = shiftLoad( 24 );
   Tscale[1] = shiftLoad( 26 );
   Tscale[2] = shiftLoad( 28 );
+  }
+  else
+  {
+    // Fills default calibration values;
+    Xscale[0] = 0;
+    Xscale[1] = 4095;
+    Xscale[2] = 2048;
+
+    Yscale[0] = 0;
+    Yscale[1] = 4095;
+    Yscale[2] = 2048;
+
+    Ascale[0] = 0;
+    Ascale[1] = 4095;
+    Ascale[2] = 2048;
+
+    Rscale[0] = 0;
+    Rscale[1] = 4095;
+    Rscale[2] = 2048;
+
+    Tscale[0] = 0;
+    Tscale[1] = 4095;
+    Tscale[2] = 3800;
+  }
+  
   if (printSerial)  {
+    Serial.print("isConfig = ");
+    Serial.println(isConfig);
+    if (isConfig==1)
+    {
+      Serial.println("Previous calibration configuration found.");
+    }
+    else
+    {
+      Serial.println("No calibration found, will use default values.");
+    }
     Serial.println("Xscale min | max | 0 || Yscale min | max | 0 | Ascale min | max | 0 || Rscale min | max | 0 ");
     Serial.print(Xscale[0]);
     Serial.print(" ");
@@ -552,8 +602,9 @@ uint16_t pullMatrix(void) {
   //  4   -  7
 
 
-  uint16_t buttons, butTemp = 0; // create a 16bit variable to store the button data
-  byte T7prevT, T8prevT, T10prevT, T12prevT = 0;
+  uint16_t buttons = 0, butTemp = 0; // create a 16bit variable to store the button data
+  byte T7prevT, T8prevT, T12prevT = 0;
+  //byte T10prevT = 0;
   digitalWrite(7, LOW); // pull line 4 down
   delay(2);
   bitWrite(buttons, 1, !(digitalRead(2))); // read T1 (cursor enable)
@@ -612,7 +663,7 @@ void printBinary(uint16_t inByte)
   Serial.print(" | ");
 }
 
-int mapAxes(int Value, uint32_t ScaleVal[])
+int mapAxes(unsigned short Value, unsigned short ScaleVal[])
 {
 
   // Clamps to max min
@@ -643,7 +694,7 @@ int mapAxes(int Value, uint32_t ScaleVal[])
 
 
 
-int mapAxesAnt(int Value, uint32_t ScaleVal[])
+int mapAxesAnt(unsigned short Value, unsigned short ScaleVal[])
 {
 
   // Clamps to max min
