@@ -1,27 +1,14 @@
-//
-// MotorShield_Serial
-//
 // Simple test of the serial communication protocol joined with the
 // Adafruit MotorShield v1.
 // The protocol sends a command, which indicates which motor
 // to run, a byte with the motor speed, and an end marker (\n)
 //
 // Giovanni Medici 2020
-//
-// © 2021. This work is licensed under a CC BY 4.0 license. 
-// You are free to:
-// Share — copy and redistribute the material in any medium or format.
-// Under the following terms:
-// Attribution — You must give appropriate credit, provide a link to the license, 
-// and indicate if changes were made. You may do so in any reasonable manner, but 
-// not in any way that suggests the licensor endorses you or your use.
-// NonCommercial — You may not use the material for commercial purposes.
-// NoDerivatives — If you remix, transform, or build upon the material, you may 
-// not distribute the modified material.
-// No additional restrictions — You may not apply legal terms or technological 
-// measures that legally restrict others from doing anything the license permits.
+// copyright Adafruit Industries LLC, 2009
+// this code is public domain, enjoy!
 
 #include <AFMotor.h>
+#include <Keyboard.h>
 
 AF_DCMotor motor1(1); // SX Rest
 AF_DCMotor motor2(2); // DX Rest
@@ -29,33 +16,64 @@ AF_DCMotor motor3(3); // SX Seat Top Bottom
 AF_DCMotor motor4(4); // DX Seat Top Bottom
 
 
+bool isEjecting = 0;  // Boolean to check whether the Ejection Handle has been pulled 
+
 const byte numChars = 2;
 char receivedChars[numChars];   // an array to store the received data
 
 boolean newData = false;
 boolean motorReady = false;
-int dataNumber = 0;             // new for this version
-
+boolean doPrint = false;
 
 
 
 void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
-  Serial.println("<Arduino is ready>");
-  Serial.println("Motor test!");
+  
 
-  // turn on motor
-  motor4.setSpeed(200);
+   // turn on motor
+   motor4.setSpeed(200);
 
-  motor4.run(RELEASE);
+   motor4.run(RELEASE);
+   pinMode(2, INPUT_PULLUP); 
+   Keyboard.begin();
 }
 
 void loop() {
+  // Vibration Motors
   recvWithEndMarker();
-  //showNewNumber();
+  // Ejection Handle
+  checkHandle();
+
 }
 
-
+// This function deals with the Ejection Seat Handle
+void checkHandle() {
+  if ( (isEjecting == 0) && (digitalRead(2) == LOW) )
+ {
+  Keyboard.press(KEY_LEFT_CTRL);
+  Keyboard.press('e');
+  if (doPrint)
+  {
+    Serial.println("EJECTING");
+  }
+  delay(2);
+  isEjecting = 1;
+  
+}
+if ( (isEjecting == 1) && (digitalRead(2) == HIGH) )
+ {
+  // Release all when was ejecting and released the lever
+  Keyboard.releaseAll();
+  if (doPrint)
+  {
+    Serial.println("END EJECTING");
+  }
+  delay(2);
+  isEjecting = 0;
+  
+}
+}
 
 void recvWithEndMarker() {
   static byte ndx = 0;
@@ -95,17 +113,6 @@ void recvWithEndMarker() {
   }
 }
 
-void showNewNumber() {
-  if (newData == true) {
-    dataNumber = 0;             // new for this version
-    dataNumber = atoi(receivedChars);   // new for this version
-    Serial.print("This just in ... ");
-    Serial.println(receivedChars);
-    Serial.print("Data as Number ... ");    // new for this version
-    Serial.println(dataNumber);     // new for this version
-    newData = false;
-  }
-}
 
 void checkMotors() {
   // This function checks the value of motorReady
@@ -212,6 +219,7 @@ byte parseCommand(byte rc)
 
   }
 
+  
 }
 
 

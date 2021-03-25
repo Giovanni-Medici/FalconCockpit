@@ -8,9 +8,10 @@ This repository contains a bunch of scripts in various scripting languages, that
 
 Most of the projects are related to the development of an home cockpit for an F-16, the only exception is an arduino project I did for an autopilot of a CRJ-200.
 
-### [Vibration Motors](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/VibrationMotors)
+### [Vibration Motors](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/VibrationMotors_EjectionSeatHandle)
 
 This project relies on an Arduino Leonardo and Arduino Motor Shield and the great [lighting viper libs](https://github.com/lightningviper/lightningstools), to interface, through a C# windows application, Falcon 4 BMS, and a seat with 6 vibration motors. [More info here](giovannimedici.wordpress.com/2020/11/21/vibration-motors-seat/)
+I added to the Arduino Leonardo, a 3d printed ejection seat handle and its springback mechanism, as the code is pretty straight forward, I simply merged it into the one of the vibration motors. [More info here](giovannimedici.wordpress.com/2021/03/25/ejection-seat-handle-and-mechanism/)
 
 ### [Standalone USB adapter for TM Cougar Throttle](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/USBstandaloneCougar)
 
