@@ -1,0 +1,168 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F675 ]
+[d frameptr 0 ]
+"15 C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+[v _ReadTimer1 ReadTimer1 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"131 C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+[v _InitTimer1 InitTimer1 `(v  1 e 1 0 ]
+"156
+[v _SwitecX12_init SwitecX12_init `(v  1 e 1 0 ]
+"172
+[v _main main `(v  1 e 1 0 ]
+"229
+[v _step step `(v  1 e 1 0 ]
+"258
+[v _stepTo stepTo `(v  1 e 1 0 ]
+"275
+[v _zero zero `(v  1 e 1 0 ]
+"284
+[v _advance advance `(v  1 e 1 0 ]
+"333
+[v _setPosition setPosition `(v  1 e 1 0 ]
+"345
+[v _update update `(v  1 e 1 0 ]
+"219 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC10-12Fxxx_DFP/1.4.56/xc8\pic\include\proc\pic12f675.h
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+"460
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"480
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"500
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
+"565
+[v _CMCON CMCON `VEuc  1 e 1 @25 ]
+"644
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S40 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nGPPU 1 0 :1:7 
+]
+"748
+[s S47 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S51 . 1 `S40 1 . 1 0 `S47 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES51  1 e 1 @129 ]
+"798
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+"990
+[v _WPU WPU `VEuc  1 e 1 @149 ]
+"1209
+[v _VRCON VRCON `VEuc  1 e 1 @153 ]
+"1405
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1574
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"1586
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1589
+[v _GP1 GP1 `VEb  1 e 0 @41 ]
+"1592
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1604
+[v _GPIE GPIE `VEb  1 e 0 @91 ]
+"1676
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"1718
+[v _T1IE T1IE `VEb  1 e 0 @1120 ]
+"1721
+[v _T1IF T1IF `VEb  1 e 0 @96 ]
+"98 C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+[v _currentStep currentStep `ui  1 e 2 0 ]
+"99
+[v _targetStep targetStep `ui  1 e 2 0 ]
+"101
+[v _microDelay microDelay `ui  1 e 2 0 ]
+"102
+[v _accelTable accelTable `*.4[2]ui  1 e 1 0 ]
+"103
+[v _maxVel maxVel `ui  1 e 2 0 ]
+"104
+[v _vel vel `ui  1 e 2 0 ]
+"105
+[v _dir dir `i  1 e 2 0 ]
+"106
+[v _stopped stopped `b  1 e 0 0 ]
+"114
+[v _defaultAccelTable defaultAccelTable `[5][2]ui  1 s 20 defaultAccelTable ]
+"172
+[v _main main `(v  1 e 1 0 ]
+{
+"174
+[v main@GP_input GP_input `uc  1 a 1 12 ]
+"226
+} 0
+"275
+[v _zero zero `(v  1 e 1 0 ]
+{
+"282
+} 0
+"258
+[v _stepTo stepTo `(v  1 e 1 0 ]
+{
+"268
+[v stepTo@i i `i  1 a 2 7 ]
+"259
+[v stepTo@count count `ui  1 a 2 5 ]
+"258
+[v stepTo@position position `ui  1 p 2 2 ]
+"273
+} 0
+"345
+[v _update update `(v  1 e 1 0 ]
+{
+"353
+} 0
+"284
+[v _advance advance `(v  1 e 1 0 ]
+{
+"305
+[v advance@delta delta `i  1 a 2 7 ]
+"324
+[v advance@i i `uc  1 a 1 6 ]
+"331
+} 0
+"229
+[v _step step `(v  1 e 1 0 ]
+{
+[v step@dir dir `i  1 p 2 0 ]
+"256
+} 0
+"15 C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+[v _ReadTimer1 ReadTimer1 `(ui  1 e 2 0 ]
+{
+[u S22 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
+"17
+[v ReadTimer1@timer timer `S22  1 a 2 3 ]
+"23
+} 0
+"333 C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+[v _setPosition setPosition `(v  1 e 1 0 ]
+{
+[v setPosition@pos pos `ui  1 p 2 0 ]
+"343
+} 0
+"131
+[v _InitTimer1 InitTimer1 `(v  1 e 1 0 ]
+{
+"149
+} 0
+"156
+[v _SwitecX12_init SwitecX12_init `(v  1 e 1 0 ]
+{
+"166
+} 0

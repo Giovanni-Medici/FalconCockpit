@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\PIC12F675_StepperDriver.X.debug.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>1024</length>
+      <used>598</used>
+      <free>426</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>64</length>
+      <used>51</used>
+      <free>13</free>
+    </memory>
+  </executable>
+</project>

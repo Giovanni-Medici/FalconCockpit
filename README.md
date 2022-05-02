@@ -8,6 +8,11 @@ This repository contains a bunch of scripts in various scripting languages, that
 
 Most of the projects are related to the development of an home cockpit for an F-16, the only exception is an arduino project I did for an autopilot of a CRJ-200.
 
+
+### [Speedbrake indicator](https://giovannimedici.wordpress.com/2022/04/03/speed-brake-indicator/)
+
+In this project I designed a custom PCB and 3D case to simulate a speedbrake indicator. I relied on a great idea of [Diabolo](http://www.viperpits.org/smf/index.php?topic=10716.msg185798#msg185798), and modified it to be more efficient in terms of pin input needed. The design relies on a PIC12F683 Microchip, to command a stepper driver, which finally moves the stepper X27.168. I used the library originally developed for Arduino as baseline to code the stepper movements. [More info here](giovannimedici.wordpress.com/2022/04/03/speed-brake-indicator/)
+
 ### [Vibration Motors](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/VibrationMotors_EjectionSeatHandle)
 
 This project relies on an Arduino Leonardo and Arduino Motor Shield and the great [lighting viper libs](https://github.com/lightningviper/lightningstools), to interface, through a C# windows application, Falcon 4 BMS, and a seat with 6 vibration motors. [More info here](giovannimedici.wordpress.com/2020/11/21/vibration-motors-seat/)

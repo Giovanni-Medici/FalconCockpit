@@ -1,0 +1,526 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+end_init CODE 0 0 0 1 2
+config CONFIG 4 2007 2007 1 2
+$dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+cinit CODE 0 3E9 3E9 16 2
+text1 CODE 0 1DF 1DF 11 2
+text2 CODE 0 26E 26E 44 2
+text3 CODE 0 203 203 13 2
+text4 CODE 0 320 320 C9 2
+text5 CODE 0 24A 24A 24 2
+text6 CODE 0 1C2 1C2 E 2
+text7 CODE 0 22E 22E 1C 2
+text8 CODE 0 1B4 1B4 E 2
+text9 CODE 0 1F0 1F0 13 2
+nvBANK0 BANK0 1 4F 4F 1 1
+maintext CODE 0 2B2 2B2 6E 2
+cstackBANK0 BANK0 1 38 38 D 1
+inittext CODE 0 1D0 1D0 F 2
+bssBANK0 BANK0 1 45 45 A 1
+idataBANK0 CODE 0 216 216 18 2
+strings STRING 0 1 1 A 2
+dataBANK0 BANK0 1 20 20 18 1
+bitnvBANK0 BANK0 1 280 50 1 1
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 51-5D 1
+BANK0 51-5D 1
+CONST B-1B3 2
+ENTRY B-1B3 2
+IDLOC 2000-2003 2
+STACK 51-5D 1
+CODE B-1B3 2
+SFR0 0-1F 1
+SFR1 80-DD 1
+EEDATA 2100-217F 2
+STRCODE B-1B3 2
+STRING B-1B3 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+3E9 cinit CODE >390:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3E9 cinit CODE >393:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3E9 cinit CODE >464:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3EA cinit CODE >465:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3EB cinit CODE >466:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3EC cinit CODE >467:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3ED cinit CODE >468:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3EE cinit CODE >469:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3EF cinit CODE >470:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F0 cinit CODE >471:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F1 cinit CODE >472:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F2 cinit CODE >473:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F3 cinit CODE >477:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F4 cinit CODE >478:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F5 cinit CODE >479:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F6 cinit CODE >480:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F7 cinit CODE >481:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F8 cinit CODE >482:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3F9 cinit CODE >483:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FA cinit CODE >484:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FB cinit CODE >485:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FC cinit CODE >486:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FD cinit CODE >492:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FD cinit CODE >494:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+3FE cinit CODE >495:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1F0 text9 CODE >156:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1F0 text9 CODE >158:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1F3 text9 CODE >159:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1F5 text9 CODE >160:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1F6 text9 CODE >161:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1F8 text9 CODE >162:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1FA text9 CODE >164:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1FE text9 CODE >165:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+202 text9 CODE >166:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1B4 text8 CODE >131:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1B4 text8 CODE >135:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1B6 text8 CODE >136:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1B7 text8 CODE >138:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1B9 text8 CODE >139:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1BA text8 CODE >142:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1BC text8 CODE >145:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1BD text8 CODE >146:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1BF text8 CODE >147:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1C0 text8 CODE >148:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1C1 text8 CODE >149:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+22E text7 CODE >333:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+22E text7 CODE >335:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+232 text7 CODE >335:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+234 text7 CODE >335:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+23C text7 CODE >336:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+240 text7 CODE >337:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+244 text7 CODE >339:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+245 text7 CODE >340:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+246 text7 CODE >341:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+249 text7 CODE >343:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1C2 text6 CODE >15:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+1C2 text6 CODE >19:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+1C7 text6 CODE >20:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+1CB text6 CODE >22:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+1CF text6 CODE >23:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X/ReadTimer1.h
+24A text5 CODE >229:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+24A text5 CODE >232:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+250 text5 CODE >232:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+254 text5 CODE >232:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+258 text5 CODE >234:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+25A text5 CODE >235:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+25C text5 CODE >235:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+260 text5 CODE >236:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+261 text5 CODE >237:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+263 text5 CODE >238:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+266 text5 CODE >238:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+269 text5 CODE >241:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+26A text5 CODE >242:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+26B text5 CODE >243:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+26D text5 CODE >256:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+320 text4 CODE >284:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+320 text4 CODE >286:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+323 text4 CODE >286:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+327 text4 CODE >286:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+331 text4 CODE >287:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+332 text4 CODE >288:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+334 text4 CODE >289:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+336 text4 CODE >295:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+33C text4 CODE >296:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+33E text4 CODE >296:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+342 text4 CODE >296:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+34F text4 CODE >298:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+353 text4 CODE >301:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+358 text4 CODE >305:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+35E text4 CODE >305:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+362 text4 CODE >305:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+36B text4 CODE >305:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+375 text4 CODE >305:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+379 text4 CODE >307:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+37E text4 CODE >307:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+382 text4 CODE >307:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+386 text4 CODE >309:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+389 text4 CODE >309:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+38D text4 CODE >309:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+391 text4 CODE >311:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+395 text4 CODE >312:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+398 text4 CODE >312:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+39C text4 CODE >312:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A0 text4 CODE >314:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A2 text4 CODE >314:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A6 text4 CODE >315:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A7 text4 CODE >317:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A7 text4 CODE >318:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3A8 text4 CODE >320:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3AC text4 CODE >320:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3AF text4 CODE >324:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3B0 text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3B1 text4 CODE >327:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3B5 text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3B8 text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3BB text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3BD text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3CB text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3CF text4 CODE >326:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3D3 text4 CODE >329:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3D6 text4 CODE >329:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3D9 text4 CODE >329:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3DB text4 CODE >329:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+3E8 text4 CODE >331:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+203 text3 CODE >345:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+203 text3 CODE >346:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+208 text3 CODE >349:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+20C text3 CODE >349:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+210 text3 CODE >349:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+214 text3 CODE >350:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+215 text3 CODE >353:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+26E text2 CODE >258:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+26E text2 CODE >261:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+271 text2 CODE >261:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+275 text2 CODE >261:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+279 text2 CODE >262:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+27D text2 CODE >263:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+281 text2 CODE >263:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+285 text2 CODE >264:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+286 text2 CODE >265:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+28A text2 CODE >266:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+28E text2 CODE >266:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+292 text2 CODE >268:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+295 text2 CODE >269:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+29A text2 CODE >270:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2A0 text2 CODE >272:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2A3 text2 CODE >272:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2A9 text2 CODE >272:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2AD text2 CODE >272:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B1 text2 CODE >273:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1DF text1 CODE >275:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1DF text1 CODE >277:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1E4 text1 CODE >278:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1E8 text1 CODE >279:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1EB text1 CODE >280:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1ED text1 CODE >281:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1EF text1 CODE >282:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B2 maintext CODE >172:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B2 maintext CODE >174:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B2 maintext CODE >176:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B4 maintext CODE >177:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B6 maintext CODE >178:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2B8 maintext CODE >179:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2BA maintext CODE >181:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2BB maintext CODE >182:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2BD maintext CODE >184:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2BF maintext CODE >185:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2C2 maintext CODE >186:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2C3 maintext CODE >189:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2C4 maintext CODE >190:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2D2 maintext CODE >191:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2D4 maintext CODE >194:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2DD maintext CODE >196:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2DE maintext CODE >197:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2EC maintext CODE >202:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2F0 maintext CODE >202:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2F3 maintext CODE >202:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2FA maintext CODE >204:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+2FB maintext CODE >208:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+300 maintext CODE >209:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+301 maintext CODE >213:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+306 maintext CODE >214:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+307 maintext CODE >218:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+30C maintext CODE >219:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+30D maintext CODE >221:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+312 maintext CODE >221:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+317 maintext CODE >221:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+31A maintext CODE >221:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+31D maintext CODE >223:C:\Users\Giovanni\MPLABXProjects\PIC12F675_StepperDriver.X\main.c
+1D0 inittext CODE >438:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D0 inittext CODE >439:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D1 inittext CODE >440:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D2 inittext CODE >441:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D3 inittext CODE >442:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D4 inittext CODE >449:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D4 inittext CODE >450:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D5 inittext CODE >451:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D6 inittext CODE >452:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D7 inittext CODE >453:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D8 inittext CODE >454:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1D9 inittext CODE >455:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1DA inittext CODE >456:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1DB inittext CODE >457:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1DC inittext CODE >458:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1DD inittext CODE >459:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+1DE inittext CODE >460:C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LdataBANK0 7FE 0 ABS 0 dataBANK0 -
+__Hspace_0 3FF0 0 ABS 0 - -
+__Hspace_1 7FE 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__HidataBANK0 7FE 0 ABS 0 idataBANK0 -
+advance@delta 3F 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_ReadTimer1 384 0 CODE 0 text6 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hstrings 7FE 0 ABS 0 strings -
+_GPIE 5B 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_GPIO 5 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_PEIE 5E 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_T1IE 460 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_T1IF 60 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+_main 564 0 CODE 0 maintext dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_step 494 0 CODE 0 text5 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_zero 3BE 0 CODE 0 text1 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+btemp 5E 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+start 0 0 CODE 0 init C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+__size_of_main 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__size_of_step 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__size_of_zero 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_setPosition 45C 0 CODE 0 text7 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_OPTION_REGbits 81 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LidataBANK0 7FE 0 ABS 0 idataBANK0 -
+__HbitnvBANK0 3FF0 -37F2 ABS 0 bitnvBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+wtemp0 5E 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__end_of_stepPulseMicrosec 16 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hclrtext 7FE 0 ABS 0 clrtext -
+__end_of_ReadTimer1 3A0 0 CODE 0 text6 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LbitnvBANK0 3FF0 -37F2 ABS 0 bitnvBANK0 -
+_ADCON0 1F 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_InitTimer1 368 0 CODE 0 text8 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lmaintext 7FE 0 ABS 0 maintext -
+__LnvBANK0 7FE 0 ABS 0 nvBANK0 -
+_advance 640 0 CODE 0 text4 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+___stacklo 0 0 ABS 0 - C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+start_initialization 7D2 0 CODE 0 cinit dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of_InitTimer1 384 0 CODE 0 text8 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__pcstackBANK0 38 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_TRISIO 85 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+__Hbank0 7FE 0 ABS 0 bank0 -
+__Hbank1 7FE 0 BANK1 1 bank1 -
+__Hcinit 7FE 0 CODE 0 cinit -
+__end_of_stepTo 564 0 CODE 0 text2 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hstack 0 0 STACK 2 stack -
+__stringbase C 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_currentStep 4D 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hmaintext 7FE 0 ABS 0 maintext -
+__end_of_update 42C 0 CODE 0 text3 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__size_of_SwitecX12_init 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hcommon 7FE 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 7FE 0 ABS 0 bank0 -
+__Lbank1 7FE 0 BANK1 1 bank1 -
+__Lcinit 7D2 0 CODE 0 cinit -
+step@dir 38 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+stepTo@i 3F 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lstack 0 0 STACK 2 stack -
+__Linittext 7FE 0 ABS 0 inittext -
+__Habs1 7FE 0 ABS 0 abs1 -
+__Hcode 7FE 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 7FE 0 ABS 0 sfr0 -
+__Hsfr1 7FE 0 ABS 0 sfr1 -
+__Htext 7FE 0 ABS 0 text -
+__Labs1 7FE 0 ABS 0 abs1 -
+__Lcode 7FE 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 7FE 0 ABS 0 sfr0 -
+__Lsfr1 7FE 0 ABS 0 sfr1 -
+__Ltext 7FE 0 ABS 0 text -
+__pnvBANK0 4F 0 BANK0 1 nvBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LcstackBANK0 7FE 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 7FE 0 ABS 0 cstackCOMMON -
+__end_of_setPosition 494 0 CODE 0 text7 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_GIE 5F 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_GP0 28 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_GP1 29 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_GP2 2A 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_WPU 95 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__S0 3FF 0 ABS 0 - -
+__S1 51 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_dir 45 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_vel 47 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__size_of_ReadTimer1 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_targetStep 4B 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+?_ReadTimer1 38 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+ReadTimer1@timer 3B 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hosccal 7FE 0 CODE 0 osccal -
+__HnvBANK0 7FE 0 ABS 0 nvBANK0 -
+__Lintentry 0 0 CODE 0 intentry -
+__stringtab 2 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LbssBANK0 7FE 0 ABS 0 bssBANK0 -
+_defaultAccelTable 24 0 BANK0 1 dataBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_microDelay 49 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_maxVel 20 0 BANK0 1 dataBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__pmaintext 564 0 CODE 0 maintext dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lcommon 7FE 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__size_of_InitTimer1 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hinittext 7FE 0 ABS 0 inittext -
+_stepTo 4DC 0 CODE 0 text2 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+___osccal_val 7FE 0 CODE 0 osccal C:\Users\Giovanni\AppData\Local\Temp\xcAsi4o.o
+setPosition@pos 38 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_update 406 0 CODE 0 text3 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of__stringtab E 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+init_fetch0 3A0 0 CODE 0 inittext dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__HcstackBANK0 7FE 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__size_of_advance 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__LcstackCOMMON 7FE 0 ABS 0 cstackCOMMON -
+end_of_initialization 7FA 0 CODE 0 cinit dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_accelTable 4F 0 BANK0 1 nvBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hintentry 0 0 CODE 0 intentry -
+__Losccal 7FE 0 CODE 0 osccal -
+__Lstrings 7FE 0 ABS 0 strings -
+__size_of_setPosition 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 7FE 0 ABS 0 bssBANK0 -
+__size_of_stepTo 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+advance@i 3E 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext1 3BE 0 CODE 0 text1 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext2 4DC 0 CODE 0 text2 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext3 406 0 CODE 0 text3 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext4 640 0 CODE 0 text4 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext5 494 0 CODE 0 text5 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext6 384 0 CODE 0 text6 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext7 45C 0 CODE 0 text7 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext8 368 0 CODE 0 text8 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__ptext9 3E0 0 CODE 0 text9 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__size_of_update 0 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+main@GP_input 44 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_stopped 280 -230 BANK0 1 bitnvBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+stepTo@count 3D 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of__initialization 7FA 0 CODE 0 cinit dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__pidataBANK0 42C 0 CODE 0 idataBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Lclrtext 7FE 0 ABS 0 clrtext -
+__end_of_resetStepMicrosec 12 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_SwitecX12_init 3E0 0 CODE 0 text9 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hend_init 2 0 CODE 0 end_init -
+init_ram0 3A8 0 CODE 0 inittext dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of_advance 7D2 0 CODE 0 text4 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of_main 640 0 CODE 0 maintext dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of_step 4DC 0 CODE 0 text5 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__end_of_zero 3E0 0 CODE 0 text1 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_ANSEL 9F 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_CMCON 19 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_T1CON 10 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_TMR1H F 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_TMR1L E 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+_VRCON 99 0 ABS 0 - dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__Hram 7FE 0 ABS 0 ram -
+__Lram 7FE 0 ABS 0 ram -
+__pbitnvBANK0 280 -230 BANK0 1 bitnvBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__HdataBANK0 7FE 0 ABS 0 dataBANK0 -
+__initialization 7D2 0 CODE 0 cinit dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__pbssBANK0 45 0 BANK0 1 bssBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__pstrings 2 0 STRING 0 strings dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+stepTo@position 3A 0 BANK0 1 cstackBANK0 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+__BbitnvBANK0 7FE -37F2 ABS 0 bitnvBANK0 -
+__end_of_SwitecX12_init 406 0 CODE 0 text9 dist/default/debug\PIC12F675_StepperDriver.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 5E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 3E9 7D2 16 2
+text1 0 1DF 3BE 11 2
+text2 0 26E 4DC 44 2
+text3 0 203 406 13 2
+text4 0 320 640 C9 2
+text5 0 24A 494 24 2
+text6 0 1C2 384 E 2
+text7 0 22E 45C 1C 2
+text8 0 1B4 368 E 2
+text9 0 1F0 3E0 13 2
+maintext 0 2B2 564 6E 2
+inittext 0 1D0 3A0 F 2
+reset_vec 0 0 0 1 2
+idataBANK0 0 216 42C 18 2
+strings 0 1 2 A 2
+dataBANK0 1 20 20 31 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
