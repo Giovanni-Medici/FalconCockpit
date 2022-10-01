@@ -8,6 +8,10 @@ This repository contains a bunch of scripts in various scripting languages, that
 
 Most of the projects are related to the development of an home cockpit for an F-16, the only exception is an arduino project I did for an autopilot of a CRJ-200.
 
+### [Internal lighting panel](https://giovannimedici.wordpress.com/2022/10/01/internal-lighting-panel/)
+
+In this project (still in progress) I designed a custom PCB and 3D case to simulate the internal lighting panel of my home cockpit. The concept is to have dual signal potentiometer to drive on one hand the DIM circuit of the backlight LEDs, and on the other command via psCockpit the position of the simulated knob on the flight simulator. [More info here](https://giovannimedici.wordpress.com/2022/10/01/internal-lighting-panel/)
+
 
 ### [Speedbrake indicator](https://giovannimedici.wordpress.com/2022/04/03/speed-brake-indicator/)
 
