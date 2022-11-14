@@ -29,6 +29,10 @@ I added to the Arduino Leonardo, a 3d printed ejection seat handle and its sprin
 
 In this project taking as reference [Uriba's post](https://pit.uriba.org/uriba/standalone-cougar-tqs-part-i/), I created a standalone adapter for the Thrustmaster Hotas Cougar Throttle, taking advantage of a Teensy 4.1. [More info here](giovannimedici.wordpress.com/2020/08/28/standalone-usb-adapter-for-tm-cougar-throttle/)
 
+### [Thrustmaster Cougar low cost force sensor](https://giovannimedici.wordpress.com/2020/10/04/tm-cougar-low-cost-force-sensor/)
+
+In this project taking as reference [Francisco Pizarro post](http://www.viperpits.org/smf/index.php?topic=7295.0), I created a custom PCB to better control the Thrustmaster Cougar low cost Force sensor. [More info here](https://giovannimedici.wordpress.com/2020/10/04/tm-cougar-low-cost-force-sensor/)
+
 ### [Ch Pro Pedals Gameport to USB adapter](https://github.com/Giovanni-Medici/FalconCockpit/tree/master/CHProPedalsGameport2USB)
 
 In this project I created an arduino interface and board to convert to USB Gameport CH Pro Pedals. [More info here](giovannimedici.wordpress.com/2020/10/11/ch-pro-pedals-gameport-to-usb-adapter/)
