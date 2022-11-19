@@ -10,10 +10,10 @@
 #include <AFMotor.h>
 #include <Keyboard.h>
 
-AF_DCMotor motor1(1); // SX Rest
-AF_DCMotor motor2(2); // DX Rest
-AF_DCMotor motor3(3); // SX Seat Top Bottom
-AF_DCMotor motor4(4); // DX Seat Top Bottom
+AF_DCMotor motor1(1); // Rest Left
+AF_DCMotor motor2(2); // Rest Right 
+AF_DCMotor motor3(3); // Seat left front back
+AF_DCMotor motor4(4); // Seat right front back
 
 
 bool isEjecting = 0;  // Boolean to check whether the Ejection Handle has been pulled 

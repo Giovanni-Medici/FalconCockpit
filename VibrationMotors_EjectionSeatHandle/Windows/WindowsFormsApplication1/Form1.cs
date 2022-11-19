@@ -10,19 +10,24 @@
 // - Damage
 // - Runway run
 //
-// Motors :
-// +---------------+
+// Motors : looking from above
+// /---------------\
 // | 1           2 |
 // |               |
-// |               |
+// |     Seat      |
 // |               |
 // |               |
 // | 3           4 |
 // +---------------+
 // |               |
-// | 5           6 |
+// | 5   Rest    6 |
 // |               |
-// +---------------+
+// \---------------/
+//
+// 1 - 3 Seat left side, front and back motors
+// 2 - 4 Seat right side, front and back motors
+// 5     Rest, left side motor
+// 6     Rest, right side motor
 //
 // Giovanni Medici 2020
 //
